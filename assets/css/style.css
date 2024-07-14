@@ -1,0 +1,31 @@
+/* Global Style */
+* {
+    box-sizing: border-box;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    font-size: 2rem;
+} 
+
+/* Game Area */
+#game-area {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    width: 80vw;
+    height: 50vh;
+    max-width: 900px;
+}
+
+#button-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+}
