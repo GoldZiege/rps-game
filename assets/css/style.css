@@ -44,3 +44,10 @@
     margin-top: 50px;
     font-size: 2.5rem;
 }
+
+/* Score Area */
+#score-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
