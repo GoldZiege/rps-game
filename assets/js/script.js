@@ -156,8 +156,6 @@ function checkWinner(playersChoice, comChoice) {
     } else if (result === "lose") {
         computerWins();
     }
-
-    return result;
 }
 
 function playerWins() {
