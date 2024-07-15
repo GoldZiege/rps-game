@@ -16,13 +16,12 @@ function runGame(playersChoice) {
     alert(`Player chose ${playersChoice}`);
     let comChoice = computersChoice();
     alert(`Computer chose ${comChoice}`);
-    let result = checkWinner(playersChoice, comChoice);
-    alert(`player ${result}`);
+    checkWinner(playersChoice, comChoice);
 }
 
 function computersChoice() {
     let difficulty = document.getElementById("difficulty").value;
-    let comChoice = "";
+    let comChoice;
     if (difficulty === "easy") {
         comChoice = easyMode();
     } else if (difficulty === "random") {
@@ -164,9 +163,37 @@ function checkWinner(playersChoice, comChoice) {
 function playerWins() {
     let oldScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++oldScore;
+    let gameMode = document.getElementById("game-mode").value;
+    if (gameMode === "first3") {
+        if (oldScore >= 3) {
+            alert("Player Wins!")
+            document.getElementById("player-score").innerText = "0";
+            document.getElementById("opponent-score").innerText = "0";
+        }
+    } else if (gameMode === "first5") {
+        if (oldScore >= 5) {
+            alert("Player Wins!")
+            document.getElementById("player-score").innerText = "0";
+            document.getElementById("opponent-score").innerText = "0";
+        }   
+    }
 }
 
 function computerWins() {
     let oldScore = parseInt(document.getElementById("opponent-score").innerText);
     document.getElementById("opponent-score").innerText = ++oldScore;
+    let gameMode = document.getElementById("game-mode").value;
+    if (gameMode === "first3") {
+        if (oldScore >= 3) {
+            alert("Player Loses!")
+            document.getElementById("player-score").innerText = "0";
+            document.getElementById("opponent-score").innerText = "0";
+        }
+    } else if (gameMode === "first5") {
+        if (oldScore >= 5) {
+            alert("Player Loses!")
+            document.getElementById("player-score").innerText = "0";
+            document.getElementById("opponent-score").innerText = "0";
+        }   
+    }
 }
