@@ -152,13 +152,21 @@ function checkWinner(playersChoice, comChoice) {
                 break;
         }
     }
+    if (result === "win") {
+        playerWins();
+    } else if (result === "lose") {
+        computerWins();
+    }
+
     return result;
 }
 
 function playerWins() {
-
+    let oldScore = parseInt(document.getElementById("player-score").innerText);
+    document.getElementById("player-score").innerText = ++oldScore;
 }
 
 function computerWins() {
-
+    let oldScore = parseInt(document.getElementById("opponent-score").innerText);
+    document.getElementById("opponent-score").innerText = ++oldScore;
 }
