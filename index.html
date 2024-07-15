@@ -10,13 +10,26 @@
     <h1 class="heading">RPS Game</h1>
     <div id="game-area">
         <div id="button-area">
-            <button class="button"><i class="fa-solid fa-hand-back-fist"></i></button>
-            <button class="button"><i class="fa-solid fa-hand"></i></button>
-            <button class="button"><i class="fa-solid fa-hand-scissors"></i></button>
-            <button class="button"><i class="fa-solid fa-hand-lizard"></i></button>
-            <button class="button"><i class="fa-solid fa-hand-spock"></i></button>
+            <button data-type="rock" class="button"><i class="fa-solid fa-hand-back-fist"></i></button>
+            <button data-type="paper" class="button"><i class="fa-solid fa-hand"></i></button>
+            <button data-type="scissors" class="button"><i class="fa-solid fa-hand-scissors"></i></button>
+            <button data-type="lizard" class="button"><i class="fa-solid fa-hand-lizard"></i></button>
+            <button data-type="spock" class="button"><i class="fa-solid fa-hand-spock"></i></button>
         </div>
         <div id="opponent-area">
+            <form>
+                <label for="difficulty">Select Difficulty:</label>
+                <select name="difficulty" id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="random">Random</option>
+                </select>
+                <br>
+                <label for="game-mode">Select Game-Mode:</label>
+                <select name="game-mode" id="game-mode">
+                    <option value="first3">First to three</option>
+                    <option value="first5">First to five</option>
+                </select>
+            </form>
             <i class="fa-solid fa-hand-back-fist opponent-icon"></i>
         </div>
     </div>
@@ -24,7 +37,10 @@
         <p class="scores">Player Score: <span id="player-score">0</span></p>
         <p class="scores">Opponent Score: <span id="opponent-score">0</span></p> 
     </div>
-    <!-- Font Awesome Kit -->
+
+    <!-- Javascript -->
     <script src="https://kit.fontawesome.com/a5d7c35c03.js" crossorigin="anonymous"></script>
+    
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

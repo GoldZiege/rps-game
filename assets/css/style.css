@@ -34,6 +34,11 @@
     border-radius: 10px;
 }
 
+.button:active, .button:hover {
+    border-color: blue;
+    color: blue;
+}
+
 #opponent-area {
     display: flex;
     flex-wrap: wrap;
@@ -50,4 +55,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
