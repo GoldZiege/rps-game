@@ -16,6 +16,8 @@ function runGame(playersChoice) {
     alert(`Player chose ${playersChoice}`);
     let comChoice = computersChoice();
     alert(`Computer chose ${comChoice}`);
+    let result = checkWinner(playersChoice, comChoice);
+    alert(`player ${result}`);
 }
 
 function computersChoice() {
@@ -53,14 +55,104 @@ function randomMode() {
         case 5:
             comChoice = "spock";
             break;
-        default:
-            comChoice = "rock";
     }
     return comChoice;
 }
 
-function checkWinner() {
-
+function checkWinner(playersChoice, comChoice) {
+    let result;
+    if (playersChoice === "rock") {
+        switch (comChoice) {
+            case "rock":
+                result = "draw";
+                break;
+            case "paper":
+                result = "lose";
+                break;
+            case "scissors":
+                result = "win";
+                break;
+            case "lizard":
+                result = "win";
+                break;
+            case "spock":
+                result = "lose";
+                break;
+        }
+    } else if (playersChoice === "paper") {
+        switch (comChoice) {
+            case "rock":
+                result = "win";
+                break;
+            case "paper":
+                result = "draw";
+                break;
+            case "scissors":
+                result = "lose";
+                break;
+            case "lizard":
+                result = "lose";
+                break;
+            case "spock":
+                result = "win";
+                break;
+        }
+    } else if (playersChoice === "scissors") {
+        switch (comChoice) {
+            case "rock":
+                result = "lose";
+                break;
+            case "paper":
+                result = "win";
+                break;
+            case "scissors":
+                result = "draw";
+                break;
+            case "lizard":
+                result = "win";
+                break;
+            case "spock":
+                result = "lose";
+                break;
+        }
+    } else if (playersChoice === "lizard") {
+        switch (comChoice) {
+            case "rock":
+                result = "lose";
+                break;
+            case "paper":
+                result = "win";
+                break;
+            case "scissors":
+                result = "lose";
+                break;
+            case "lizard":
+                result = "draw";
+                break;
+            case "spock":
+                result = "win";
+                break;
+        }
+    } else if (playersChoice === "spock") {
+        switch (comChoice) {
+            case "rock":
+                result = "win";
+                break;
+            case "paper":
+                result = "lose";
+                break;
+            case "scissors":
+                result = "win";
+                break;
+            case "lizard":
+                result = "lose";
+                break;
+            case "spock":
+                result = "draw";
+                break;
+        }
+    }
+    return result;
 }
 
 function playerWins() {
