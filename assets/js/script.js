@@ -34,7 +34,29 @@ function easyMode() {
 }
 
 function randomMode() {
+    let comChoice;
+    let comChoiceNumber = Math.floor(Math.random()*5)+1;
 
+    switch (comChoiceNumber){
+        case 1:
+            comChoice = "rock";
+            break;
+        case 2: 
+            comChoice = "paper";
+            break;
+        case 3:
+            comChoice = "scissors";
+            break;
+        case 4:
+            comChoice = "lizard";
+            break;
+        case 5:
+            comChoice = "spock";
+            break;
+        default:
+            comChoice = "rock";
+    }
+    return comChoice;
 }
 
 function checkWinner() {
