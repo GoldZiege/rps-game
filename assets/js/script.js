@@ -11,14 +11,19 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 })
-
+/**
+ * The Main function that is called when the player chooses a Symbol 
+ */
 function runGame(playersChoice) {
-    //alert(`Player chose ${playersChoice}`);
     let comChoice = computersChoice();
-    //alert(`Computer chose ${comChoice}`);
+    
     checkWinner(playersChoice, comChoice);
 }
 
+/**
+ * Checks the difficulty setting and calls the
+ * assigned function. Returns computers choice.
+ */
 function computersChoice() {
     let difficulty = document.getElementById("difficulty").value;
     let comChoice;
@@ -33,10 +38,17 @@ function computersChoice() {
     return comChoice;
 }
 
+/**
+ * Is called when easy mode is chosen in settings.
+ */
 function easyMode() {
     return "rock";
 }
 
+/**
+ * Is called when random mode is chosen in settings.
+ * Returns the computers choice to computersChoice function.
+ */
 function randomMode() {
     let comChoice;
     let comChoiceNumber = Math.floor(Math.random()*5)+1;
@@ -61,6 +73,10 @@ function randomMode() {
     return comChoice;
 }
 
+/**
+ * Gets the playersChoice and comChoice parameter and
+ * checks which choice wins. 
+ */
 function checkWinner(playersChoice, comChoice) {
     let result;
     if (playersChoice === "rock") {
@@ -161,6 +177,11 @@ function checkWinner(playersChoice, comChoice) {
     }
 }
 
+/**
+ * Is called when the players symbol wins. Increases players
+ * score and checks whether the game is over based on
+ * game mode settings. 
+ */
 function playerWins() {
     let oldScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++oldScore;
@@ -180,6 +201,11 @@ function playerWins() {
     }
 }
 
+/**
+ * Is called when the computers symbol wins. Increases players
+ * score and checks whether the game is over based on
+ * game mode settings. 
+ */
 function computerWins() {
     let oldScore = parseInt(document.getElementById("opponent-score").innerText);
     document.getElementById("opponent-score").innerText = ++oldScore;
@@ -199,6 +225,9 @@ function computerWins() {
     }
 }
 
+/**
+ * Changes the computer Icon based on the comChoice parameter.
+ */
 function changeComputerIcon(comChoice) {
     let icon = document.getElementById("opponent-icon");
     icon.classList.remove("fa-hand-back-fist");
