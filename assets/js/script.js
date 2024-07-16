@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 function runGame(playersChoice) {
-    alert(`Player chose ${playersChoice}`);
+    //alert(`Player chose ${playersChoice}`);
     let comChoice = computersChoice();
-    alert(`Computer chose ${comChoice}`);
+    //alert(`Computer chose ${comChoice}`);
     checkWinner(playersChoice, comChoice);
 }
 
@@ -27,6 +27,9 @@ function computersChoice() {
     } else if (difficulty === "random") {
         comChoice = randomMode();
     }
+
+    changeComputerIcon(comChoice);
+    
     return comChoice;
 }
 
@@ -193,5 +196,32 @@ function computerWins() {
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }   
+    }
+}
+
+function changeComputerIcon(comChoice) {
+    let icon = document.getElementById("opponent-icon");
+    icon.classList.remove("fa-hand-back-fist");
+    icon.classList.remove("fa-hand");
+    icon.classList.remove("fa-hand-scissors");
+    icon.classList.remove("fa-hand-lizard");
+    icon.classList.remove("fa-hand-spock");
+
+    switch (comChoice) {
+        case "rock":
+            icon.classList.add("fa-hand-back-fist");
+            break;
+        case "paper":
+            icon.classList.add("fa-hand");
+            break;
+        case "scissors":
+            icon.classList.add("fa-hand-scissors");
+            break;
+        case "lizard":
+            icon.classList.add("fa-hand-lizard");
+             break;
+        case "spock":
+            icon.classList.add("fa-hand-spock");
+            break;
     }
 }
