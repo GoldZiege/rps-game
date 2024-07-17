@@ -22,7 +22,7 @@ body {
     margin-right: auto;
     background-color: gray;
     width: 80vw;
-    height: 70vh;
+    height: auto;
     max-width: 450px;
 }
 
@@ -55,6 +55,7 @@ body {
 
 #settings {
     margin-top: 10px;
+    margin-bottom: 10px;
     border: 2px solid black;
     border-radius: 10px;
     background-color: whitesmoke;
@@ -72,6 +73,7 @@ select {
     border: 10px solid red;
     border-radius: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .opponent-icon {
