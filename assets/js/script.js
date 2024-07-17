@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * The Main function that is called when the player chooses a Symbol 
  */
 function runGame(playersChoice) {
-    let comChoice = computersChoice();
+    let comChoice = computersChoice(playersChoice);
     
     checkWinner(playersChoice, comChoice);
 }
@@ -24,11 +24,11 @@ function runGame(playersChoice) {
  * Checks the difficulty setting and calls the
  * assigned function. Returns computers choice.
  */
-function computersChoice() {
+function computersChoice(playersChoice) {
     let difficulty = document.getElementById("difficulty").value;
     let comChoice;
     if (difficulty === "easy") {
-        comChoice = easyMode();
+        comChoice = easyMode(playersChoice);
     } else if (difficulty === "random") {
         comChoice = randomMode();
     }
@@ -40,9 +40,13 @@ function computersChoice() {
 
 /**
  * Is called when easy mode is chosen in settings.
+ * Returns computers choice based on last choice by player.
  */
-function easyMode() {
-    return "rock";
+function easyMode(playersChoice) {
+    let lastChoice = document.getElementById("previous-choice").innerText;
+    document.getElementById("previous-choice").innerText = playersChoice;
+    let comChoice = lastChoice;
+    return comChoice;
 }
 
 /**

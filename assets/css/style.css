@@ -84,3 +84,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+#previous-choice {
+    position: absolute;
+    right:0%;
+    bottom:0%;
+    color:white;
+}
