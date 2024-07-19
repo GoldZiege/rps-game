@@ -187,18 +187,25 @@ function checkWinner(playersChoice, comChoice) {
  * game mode settings. 
  */
 function playerWins() {
+    // Tells the player if the player won the round
+    document.getElementById("round-winner").innerText = "Player Won";
+
+    // The players score gets raised by one
     let oldScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++oldScore;
+
+    // The function checks what game mode is played
+    // and if the game is over
     let gameMode = document.getElementById("game-mode").value;
     if (gameMode === "first3") {
         if (oldScore >= 3) {
-            alert("Player Wins!")
+            alert("Player wins the game!")
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }
     } else if (gameMode === "first5") {
         if (oldScore >= 5) {
-            alert("Player Wins!")
+            alert("Player wins the game!")
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }   
@@ -211,18 +218,25 @@ function playerWins() {
  * game mode settings. 
  */
 function computerWins() {
+    // Tells the player if the computer won the round
+    document.getElementById("round-winner").innerText = "Computer Won";
+
+    // The computers score gets raised by one
     let oldScore = parseInt(document.getElementById("opponent-score").innerText);
     document.getElementById("opponent-score").innerText = ++oldScore;
+
+    // The function checks what game mode is played
+    // and if the game is over
     let gameMode = document.getElementById("game-mode").value;
     if (gameMode === "first3") {
         if (oldScore >= 3) {
-            alert("Player Loses!")
+            alert("Computer wins the game!")
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }
     } else if (gameMode === "first5") {
         if (oldScore >= 5) {
-            alert("Player Loses!")
+            alert("Computer wins the game!")
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }   
