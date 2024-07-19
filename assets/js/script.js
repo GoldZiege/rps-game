@@ -187,8 +187,12 @@ function checkWinner(playersChoice, comChoice) {
  * game mode settings. 
  */
 function playerWins() {
-    // Tells the player if the player won the round
-    document.getElementById("round-winner").innerText = "Player Won";
+    // Tells the player when the player won the round
+    let roundWinner = document.getElementById("round-winner");
+    roundWinner.classList.remove("blue-text");
+    roundWinner.classList.remove("red-text");
+    roundWinner.classList.add("blue-text");
+    roundWinner.innerText = "Player Won";
 
     // The players score gets raised by one
     let oldScore = parseInt(document.getElementById("player-score").innerText);
@@ -218,8 +222,12 @@ function playerWins() {
  * game mode settings. 
  */
 function computerWins() {
-    // Tells the player if the computer won the round
-    document.getElementById("round-winner").innerText = "Computer Won";
+    // Tells the player when the computer won the round
+    let roundWinner = document.getElementById("round-winner");
+    roundWinner.classList.remove("blue-text");
+    roundWinner.classList.remove("red-text");
+    roundWinner.classList.add("red-text");
+    roundWinner.innerText = "Computer Won";
 
     // The computers score gets raised by one
     let oldScore = parseInt(document.getElementById("opponent-score").innerText);

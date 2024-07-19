@@ -52,6 +52,14 @@ body {
     font-weight: bold;
 }
 
+.blue-text {
+    color: blue;
+}
+
+.red-text {
+    color: red;
+}
+
 #opponent-area {
     display: flex;
     flex-wrap: wrap;
