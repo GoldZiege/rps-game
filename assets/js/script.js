@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function(){
             let playersChoice = this.getAttribute("data-type");
             runGame(playersChoice);
-        })
+        });
     }
-})
+});
 /**
  * The Main function that is called when the player chooses a Symbol 
  */
@@ -203,13 +203,13 @@ function playerWins() {
     let gameMode = document.getElementById("game-mode").value;
     if (gameMode === "first3") {
         if (oldScore >= 3) {
-            alert("Player wins the game!")
+            alert("Player wins the game!");
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }
     } else if (gameMode === "first5") {
         if (oldScore >= 5) {
-            alert("Player wins the game!")
+            alert("Player wins the game!");
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }   
@@ -238,13 +238,13 @@ function computerWins() {
     let gameMode = document.getElementById("game-mode").value;
     if (gameMode === "first3") {
         if (oldScore >= 3) {
-            alert("Computer wins the game!")
+            alert("Computer wins the game!");
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }
     } else if (gameMode === "first5") {
         if (oldScore >= 5) {
-            alert("Computer wins the game!")
+            alert("Computer wins the game!");
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }   
