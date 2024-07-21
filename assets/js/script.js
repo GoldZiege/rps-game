@@ -1,3 +1,8 @@
+// Constants
+const helpWindowRef = document.getElementById("modal-help");
+const winScreenRef = document.getElementById("modal-winner");
+const winnerRef = document.getElementById("win-screen-text");
+
 // Wait for the DOM to finish loading before starting the game
 // Get the button elements and add event listeners to them
 // This is the same as in the Love Maths project!
@@ -11,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 let playersChoice = this.getAttribute("data-type");
                 runGame(playersChoice);
             } else if (buttonType === "modal-help") {
-                openHelp();
+                helpWindowRef.style.display = "block";
             } else if (buttonType === "close-help") {
-                closeHelp();
+                helpWindowRef.style.display = "none";
             } else if (buttonType === "close-winner") {
                 closeWinScrn();
             }
@@ -254,6 +259,9 @@ function computerWins() {
     }
 }
 
+/**
+ * Is called when the round is a draw.
+ */
 function roundDraw() {
     let roundWinner = document.getElementById("round-winner");
     roundWinner.classList.remove("blue-text");
@@ -291,36 +299,21 @@ function changeComputerIcon(comChoice) {
     }
 }
 
-function openHelp() {
-    let helpWindow = document.getElementById("modal-help");
-    helpWindow.style.display = "block";
-}
-
-function closeHelp() {
-    let helpWindow = document.getElementById("modal-help");
-    helpWindow.style.display = "none";
-}
-
 function closeWinScrn() {
-    let winScreen = document.getElementById("modal-winner");
-    winScreen.style.display = "none";
+    winScreenRef.style.display = "none";
 
     document.getElementById("player-score").innerText = "0";
     document.getElementById("opponent-score").innerText = "0";
 }
 
 function playerWinScrn() {
-    let winner = document.getElementById("win-screen-text");
-    winner.innerText = "Player Wins!!!";
+    winnerRef.innerText = "Player Wins!!!";
 
-    let winScreen = document.getElementById("modal-winner");
-    winScreen.style.display = "block";
+    winScreenRef.style.display = "block";
 }
 
 function computerWinScrn() {
-    let winner = document.getElementById("win-screen-text");
-    winner.innerText = "Computer Wins!!!";
+    winnerRef.innerText = "Computer Wins!!!";
 
-    let winScreen = document.getElementById("modal-winner");
-    winScreen.style.display = "block";
+    winScreenRef.style.display = "block";
 }
