@@ -213,14 +213,10 @@ function playerWins() {
     if (gameMode === "first3") {
         if (oldScore >= 3) {
             playerWinScrn();
-            document.getElementById("player-score").innerText = "0";
-            document.getElementById("opponent-score").innerText = "0";
         }
     } else if (gameMode === "first5") {
         if (oldScore >= 5) {
             playerWinScrn();
-            document.getElementById("player-score").innerText = "0";
-            document.getElementById("opponent-score").innerText = "0";
         }   
     }
 }
@@ -248,14 +244,10 @@ function computerWins() {
     if (gameMode === "first3") {
         if (oldScore >= 3) {
             computerWinScrn();
-            document.getElementById("player-score").innerText = "0";
-            document.getElementById("opponent-score").innerText = "0";
         }
     } else if (gameMode === "first5") {
         if (oldScore >= 5) {
             computerWinScrn();
-            document.getElementById("player-score").innerText = "0";
-            document.getElementById("opponent-score").innerText = "0";
         }   
     }
 }
@@ -303,18 +295,23 @@ function closeHelp() {
 function closeWinScrn() {
     let winScreen = document.getElementById("modal-winner");
     winScreen.style.display = "none";
+
+    document.getElementById("player-score").innerText = "0";
+    document.getElementById("opponent-score").innerText = "0";
 }
 
 function playerWinScrn() {
     let winner = document.getElementById("win-screen-text");
-    winner.innerText = "Player wins the game!!!";
+    winner.innerText = "Player Wins!!!";
+
     let winScreen = document.getElementById("modal-winner");
     winScreen.style.display = "block";
 }
 
 function computerWinScrn() {
     let winner = document.getElementById("win-screen-text");
-    winner.innerText = "Computer wins the game!!!";
+    winner.innerText = "Computer Wins!!!";
+
     let winScreen = document.getElementById("modal-winner");
     winScreen.style.display = "block";
 }
