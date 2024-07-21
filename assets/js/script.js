@@ -212,13 +212,13 @@ function playerWins() {
     let gameMode = document.getElementById("game-mode").value;
     if (gameMode === "first3") {
         if (oldScore >= 3) {
-            alert("Player wins the game!");
+            playerWinScrn();
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }
     } else if (gameMode === "first5") {
         if (oldScore >= 5) {
-            alert("Player wins the game!");
+            playerWinScrn();
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }   
@@ -247,13 +247,13 @@ function computerWins() {
     let gameMode = document.getElementById("game-mode").value;
     if (gameMode === "first3") {
         if (oldScore >= 3) {
-            alert("Computer wins the game!");
+            computerWinScrn();
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }
     } else if (gameMode === "first5") {
         if (oldScore >= 5) {
-            alert("Computer wins the game!");
+            computerWinScrn();
             document.getElementById("player-score").innerText = "0";
             document.getElementById("opponent-score").innerText = "0";
         }   
@@ -303,4 +303,18 @@ function closeHelp() {
 function closeWinScrn() {
     let winScreen = document.getElementById("modal-winner");
     winScreen.style.display = "none";
+}
+
+function playerWinScrn() {
+    let winner = document.getElementById("win-screen-text");
+    winner.innerText = "Player wins the game!!!";
+    let winScreen = document.getElementById("modal-winner");
+    winScreen.style.display = "block";
+}
+
+function computerWinScrn() {
+    let winner = document.getElementById("win-screen-text");
+    winner.innerText = "Computer wins the game!!!";
+    let winScreen = document.getElementById("modal-winner");
+    winScreen.style.display = "block";
 }
