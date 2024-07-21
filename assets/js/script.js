@@ -187,6 +187,8 @@ function checkWinner(playersChoice, comChoice) {
         playerWins();
     } else if (result === "lose") {
         computerWins();
+    } else if (result === "draw") {
+        roundDraw();
     }
 }
 
@@ -250,6 +252,13 @@ function computerWins() {
             computerWinScrn();
         }   
     }
+}
+
+function roundDraw() {
+    let roundWinner = document.getElementById("round-winner");
+    roundWinner.classList.remove("blue-text");
+    roundWinner.classList.remove("red-text");
+    roundWinner.innerText = "It's a Draw";
 }
 
 /**
