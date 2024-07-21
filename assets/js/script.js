@@ -6,8 +6,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function(){
-            let playersChoice = this.getAttribute("data-type");
-            runGame(playersChoice);
+            const buttonType = this.getAttribute("data-type");
+            if (buttonType === "rock" || buttonType === "paper" || buttonType === "scissors" || buttonType === "lizard" || buttonType === "spock") {
+                let playersChoice = this.getAttribute("data-type");
+                runGame(playersChoice);
+            } else if (buttonType === "modal-help") {
+                openHelp();
+            } else if (buttonType === "close-help") {
+                closeHelp();
+            } else if (buttonType === "close-winner") {
+                closeWinScrn();
+            }
         });
     }
 });
@@ -279,4 +288,19 @@ function changeComputerIcon(comChoice) {
             icon.classList.add("fa-hand-spock");
             break;
     }
+}
+
+function openHelp() {
+    let helpWindow = document.getElementById("modal-help");
+    helpWindow.style.display = "block";
+}
+
+function closeHelp() {
+    let helpWindow = document.getElementById("modal-help");
+    helpWindow.style.display = "none";
+}
+
+function closeWinScrn() {
+    let winScreen = document.getElementById("modal-winner");
+    winScreen.style.display = "none";
 }

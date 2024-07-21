@@ -11,10 +11,10 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>RPS Game</title>
+    <title>RPSLS Game</title>
 </head>
 <body>
-    <h1 class="heading">RPS Game</h1>
+    <h1 class="heading">RPSLS Game</h1>
     <div id="game-area">
         <div id="button-area">
             <button aria-label="rock" data-type="rock" class="button"><i class="fa-solid fa-hand-back-fist"></i></button>
@@ -37,6 +37,8 @@
                     <option value="first3">First to three</option>
                     <option value="first5">First to five</option>
                 </select>
+                <br>
+                <button data-type="modal-help" class="settings-btn">How to play</button>
             </form>
             <div id="computer-icon">
                 <i class="fa-solid fa-hand-back-fist opponent-icon" id="opponent-icon"></i>
@@ -51,6 +53,19 @@
     <!-- Hidden choice storage-->
     <p id="previous-choice">rock</p>
 
+    <div id="modal-help">
+        <section>
+            <h2>How to play</h2>
+            <img id="rpsls-img" src="assets/images/rpsls.webp" alt="an explanation on what beats what in the game">
+            <br>
+            <button data-type="close-help" class="settings-btn">close</button>
+        </section>
+    </div>
+
+    <div id="modal-winner">
+        <p id="win-screen"></p>
+        <button data-type="close-winner" class="settings-btn">close</button>
+    </div>
     <!-- Javascript -->
     <script src="https://kit.fontawesome.com/a5d7c35c03.js" crossorigin="anonymous"></script>
     
