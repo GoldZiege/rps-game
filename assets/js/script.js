@@ -9,20 +9,24 @@ const winnerRef = document.getElementById("win-screen-text");
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
+
+    function handleButtonClick(event) {
+        const buttonType = this.getAttribute("data-type");
+        if (buttonType === "rock" || buttonType === "paper" || buttonType === "scissors" || buttonType === "lizard" || buttonType === "spock") {
+            let playersChoice = this.getAttribute("data-type");
+            runGame(playersChoice);
+        } else if (buttonType === "modal-help") {
+            helpWindowRef.style.display = "block";
+        } else if (buttonType === "close-help") {
+            helpWindowRef.style.display = "none";
+        } else if (buttonType === "close-winner") {
+            closeWinScrn();
+        }
+    }
+
+
     for (let button of buttons) {
-        button.addEventListener("click", function(){
-            const buttonType = this.getAttribute("data-type");
-            if (buttonType === "rock" || buttonType === "paper" || buttonType === "scissors" || buttonType === "lizard" || buttonType === "spock") {
-                let playersChoice = this.getAttribute("data-type");
-                runGame(playersChoice);
-            } else if (buttonType === "modal-help") {
-                helpWindowRef.style.display = "block";
-            } else if (buttonType === "close-help") {
-                helpWindowRef.style.display = "none";
-            } else if (buttonType === "close-winner") {
-                closeWinScrn();
-            }
-        });
+        button.addEventListener("click", handleButtonClick);
     }
 });
 /**
