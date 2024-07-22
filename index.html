@@ -16,6 +16,7 @@
 <body>
     <h1 class="heading">RPSLS Game</h1>
     <div id="game-area">
+        <!-- Player Area -->
         <div id="button-area">
             <button aria-label="rock" data-type="rock" class="button"><i class="fa-solid fa-hand-back-fist"></i></button>
             <button aria-label="paper" data-type="paper" class="button"><i class="fa-solid fa-hand"></i></button>
@@ -25,11 +26,12 @@
         </div>
         <p id="round-winner">Player vs. Computer</p>
         <div id="opponent-area">
+            <!-- Settings -->
             <form id="settings">
                 <label for="difficulty">Difficulty:</label>
                 <select name="difficulty" id="difficulty">
                     <option value="easy">Easy</option>
-                    <option value="random">Random</option>
+                    <option value="random">Difficult</option>
                 </select>
                 <br>
                 <label for="game-mode">Game-Mode:</label>
@@ -40,6 +42,7 @@
                 <br>
                 <button data-type="modal-help" class="settings-btn">How to play</button>
             </form>
+            <!-- Computer Icon -->
             <div id="computer-icon">
                 <i class="fa-solid fa-hand-back-fist opponent-icon" id="opponent-icon"></i>
             </div>
@@ -53,6 +56,7 @@
     <!-- Hidden choice storage-->
     <p id="previous-choice">rock</p>
 
+    <!-- Modals -->
     <div id="modal-help">
         <section>
             <h2>How to play</h2>

@@ -2,6 +2,7 @@
 const helpWindowRef = document.getElementById("modal-help");
 const winScreenRef = document.getElementById("modal-winner");
 const winnerRef = document.getElementById("win-screen-text");
+const roundWinnerRef = document.getElementById("round-winner");
 
 // Wait for the DOM to finish loading before starting the game
 // Get the button elements and add event listeners to them
@@ -68,7 +69,7 @@ function easyMode(playersChoice) {
 }
 
 /**
- * Is called when random mode is chosen in settings.
+ * Is called when difficult mode is chosen in settings.
  * Returns the computers choice to computersChoice function.
  */
 function randomMode() {
@@ -208,11 +209,10 @@ function checkWinner(playersChoice, comChoice) {
  */
 function playerWins() {
     // Tells the player when the player won the round
-    let roundWinner = document.getElementById("round-winner");
-    roundWinner.classList.remove("blue-text");
-    roundWinner.classList.remove("red-text");
-    roundWinner.classList.add("blue-text");
-    roundWinner.innerText = "Player Won";
+    roundWinnerRef.classList.remove("blue-text");
+    roundWinnerRef.classList.remove("red-text");
+    roundWinnerRef.classList.add("blue-text");
+    roundWinnerRef.innerText = "Player Won";
 
     // The players score gets raised by one
     let oldScore = parseInt(document.getElementById("player-score").innerText);
@@ -239,11 +239,10 @@ function playerWins() {
  */
 function computerWins() {
     // Tells the player when the computer won the round
-    let roundWinner = document.getElementById("round-winner");
-    roundWinner.classList.remove("blue-text");
-    roundWinner.classList.remove("red-text");
-    roundWinner.classList.add("red-text");
-    roundWinner.innerText = "Computer Won";
+    roundWinnerRef.classList.remove("blue-text");
+    roundWinnerRef.classList.remove("red-text");
+    roundWinnerRef.classList.add("red-text");
+    roundWinnerRef.innerText = "Computer Won";
 
     // The computers score gets raised by one
     let oldScore = parseInt(document.getElementById("opponent-score").innerText);
@@ -267,10 +266,9 @@ function computerWins() {
  * Is called when the round is a draw.
  */
 function roundDraw() {
-    let roundWinner = document.getElementById("round-winner");
-    roundWinner.classList.remove("blue-text");
-    roundWinner.classList.remove("red-text");
-    roundWinner.innerText = "It's a Draw";
+    roundWinnerRef.classList.remove("blue-text");
+    roundWinnerRef.classList.remove("red-text");
+    roundWinnerRef.innerText = "It's a Draw";
 }
 
 /**
