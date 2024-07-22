@@ -146,13 +146,17 @@ select {
 }
 
 #win-screen-text {
-    top: 200px;
-    font-size: 10rem;
+    margin-top: 200px;
+    font-size: 3rem;
     color: whitesmoke;
 }
 
-@media screen and (min-width: 400px) {
+.settings-btn {
+    border-radius: 10px;
+}
 
+@media screen and (min-width: 400px) {
+    /* Game Area */
     #settings {
         margin-top: 75px;
     }
@@ -161,7 +165,15 @@ select {
         margin-top: 75px;
     }
 
+    /* Modals*/
     #rpsls-img {
         max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    /* Modals */
+    #win-screen-text {
+        font-size: 6rem;
     }
 }
