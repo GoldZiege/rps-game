@@ -301,6 +301,10 @@ function changeComputerIcon(comChoice) {
     }
 }
 
+/**
+ * Gets called when close button on win screen is pressed and
+ * closes the win screen. Resets the scores.
+ */
 function closeWinScrn() {
     winScreenRef.style.display = "none";
 
@@ -308,12 +312,18 @@ function closeWinScrn() {
     document.getElementById("opponent-score").innerText = "0";
 }
 
+/**
+ * Shows the win screen for a player victory.
+ */
 function playerWinScrn() {
     winnerRef.innerText = "Player Wins!!!";
 
     winScreenRef.style.display = "block";
 }
 
+/**
+ * Shows the win screen for a computer victory.
+ */
 function computerWinScrn() {
     winnerRef.innerText = "Computer Wins!!!";
 
