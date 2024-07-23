@@ -120,6 +120,7 @@ The RPSLS Game is a web application variant of the game "Rock, Paper, Scissors, 
 
 ### Media
 - The how to play image was taken from [bigbangtheory.fandom.com](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
+- The favicon was generated using the how to play image with [favicon.io](https://favicon.io/favicon-converter/)
 
 ### Special Thanks
 - to my mentor David Bowers for his useful help, hints and tips.
