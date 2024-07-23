@@ -45,3 +45,81 @@ The RPSLS Game is a web application variant of the game "Rock, Paper, Scissors, 
 - The winning screen appears when either the player or the computer reach the maximum score and win the game.
 
 ![Screenshot of the winning screen with the player being the winner](docs/win-screen.png)
+
+## Testing
+
+### Manual Testing
+- During testing, I used four different browsers to ensure cross-compatibility. The browsers used were:
+    1. Firefox
+    2. Chrome
+    3. Edge
+    4. Opera
+
+- I used the devtools to simulate different screen sizes/devices from 200 px up to 2000px in width.
+
+### Validators
+
+***HTML***
+
+- Using the W3C markup validation service, no issues were found in the html code
+
+***CSS***
+
+- Using the W3C CSS validation service, no issues were found in the CSS file
+
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="CSS ist valide!" />
+    </a>
+</p>
+
+***Javascript***
+
+- Using [jshint](https://jshint.com) two main issues were found
+1. **Issue**: several semi-colons were missing
+    - **Solution**: I added semi-colons where they were missing
+2. **Issue**: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (runGame, closeWinScrn)
+    - **Solution**: This was fixed by taking the concerned functions that were referencing the outer scoped variable out of the event listener loop.
+
+### Lighthouse scores
+
+- the accessibility score was at 88 in the beginning because I forgot to add aria-labels to the buttons without text as well as some buttons were too small for touchscreen use.
+- the SEO score started out at 90 as the meta description and keywords were missing
+
+#### Desktop
+
+![screenshot of lighthouse desktop scores](docs/lighthouse-rpsls-desktop.png)
+
+#### Mobile
+
+![screenshot of lighthouse mobile scores](docs/lighthouse-rpsls-mobile.png)
+
+### Wave
+- In addition I used the web accessibility evaluation tool (WAVE) and two contrast errors were found.
+    - one error was solved by changing the colors of the affected text.
+    - the second error concerned text that is supposed to be unreadable so I ignored it.
+
+## Deployment
+- The site was deployed to GitHub pages. The following steps were needed:
+    1. From the project's repository, go to the Settings tab.
+    2. On the left, go to the Pages tab.
+    3. Under Branch, choose main from the drop-down menu.
+    4. Click save and refresh the page
+    5. On the top of the pages tab, it shows successful deployment.
+
+## Credits
+
+### General
+- The project was influenced by the Code Institutes code along project called Love maths. I tried to deviate from the code as much as possible. Nevertheless there may be similarities.
+- I used W3schools, MDN web docs and the Code Inistitute HTML, CSS and Javacript essentials content as general reference.
+
+### Content
+- All icons used for the buttons are taken from [FontAwesome](https://fontawesome.com/)
+
+### Media
+- The how to play image was taken from [bigbangtheory.fandom.com](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
+
+### Special Thanks
+- to my mentor David Bowers for his useful help, hints and tips.
