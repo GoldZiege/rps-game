@@ -31,7 +31,7 @@ The [RPSLS Game](https://goldziege.github.io/rps-game/) is a web application var
 #### Settings
 - The settings give the player the opportunity to choose either easy or difficult as the computers difficulty setting.
 - It also features two game-modes. "First to three" and "First to five".
-- There is a "How to play" button in the setttings-area that opens up a modal. The modal shows a picture that tells the player which symbol beats which symbol.
+- There is a "How to play" button in the setttings-area that opens up a modal. The modal shows a picture that tells the player which symbol beats which symbol as well as a short list of instructions on how to play the game.
 
 ![Screenshot of the settings-area](docs/settings.png)
 ![Screenshot of the how to play screen](docs/how-to-play.png)
