@@ -269,6 +269,9 @@ function roundDraw() {
     roundWinnerRef.classList.remove("blue-text");
     roundWinnerRef.classList.remove("red-text");
     roundWinnerRef.innerText = "It's a Draw";
+
+    let oldScore = parseInt(document.getElementById("draw-score").innerText);
+    document.getElementById("draw-score").innerText = ++oldScore;
 }
 
 /**
@@ -309,6 +312,7 @@ function closeWinScrn() {
     winScreenRef.style.display = "none";
 
     document.getElementById("player-score").innerText = "0";
+    document.getElementById("draw-score").innerText = "0";
     document.getElementById("opponent-score").innerText = "0";
 
     roundWinnerRef.classList.remove("blue-text");
