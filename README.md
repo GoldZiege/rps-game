@@ -1,6 +1,6 @@
 # RPSLS Game
 
-The RPSLS Game is a web application variant of the game "Rock, Paper, Scissors, Lizard, Spock". Target audience are people that want to play a simple online game based on chance. The Game gives the player the opportunity to play against the computer with two difficulty options as well as two game-modes.
+The [RPSLS Game](https://goldziege.github.io/rps-game/) is a web application variant of the game "Rock, Paper, Scissors, Lizard, Spock". Target audience are people that want to play a simple online game based on chance. The Game gives the player the opportunity to play against the computer with two difficulty options as well as two game-modes.
 
 ![Overview screenshot for different devices](docs/responsive1.png)
 
@@ -110,6 +110,7 @@ The RPSLS Game is a web application variant of the game "Rock, Paper, Scissors, 
     3. Under Branch, choose main from the drop-down menu.
     4. Click save and refresh the page
     5. On the top of the pages tab, it shows successful deployment.
+- Here's a link to the [deployed website](https://goldziege.github.io/rps-game/)
 
 ## Credits
 
