@@ -303,13 +303,17 @@ function changeComputerIcon(comChoice) {
 
 /**
  * Gets called when close button on win screen is pressed and
- * closes the win screen. Resets the scores.
+ * closes the win screen. Resets the scores. Resets the round winner indicator.
  */
 function closeWinScrn() {
     winScreenRef.style.display = "none";
 
     document.getElementById("player-score").innerText = "0";
     document.getElementById("opponent-score").innerText = "0";
+
+    roundWinnerRef.classList.remove("blue-text");
+    roundWinnerRef.classList.remove("red-text");
+    roundWinnerRef.innerText = "Player vs. Computer";
 }
 
 /**
