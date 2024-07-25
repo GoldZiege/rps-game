@@ -46,6 +46,10 @@ The [RPSLS Game](https://goldziege.github.io/rps-game/) is a web application var
 
 ![Screenshot of the winning screen with the player being the winner](docs/win-screen.png)
 
+### Features in the future
+- When there is time, I would like to give the player the ability to enter a Username before the game starts
+- I would also like to add a third difficulty level that uses a more complex pattern to choose the computers symbol
+
 ## Testing
 
 ### Manual Testing
