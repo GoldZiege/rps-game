@@ -126,7 +126,7 @@ select {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100%;
+    height: 150%;
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
@@ -135,6 +135,14 @@ select {
 
 #rpsls-img {
     max-width: 200px;
+}
+
+#help-text {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border-radius: 10px;
 }
 
 #modal-winner {
@@ -175,6 +183,11 @@ select {
     #rpsls-img {
         max-width: 400px;
     }
+
+    #help-text {
+        width: 400px;
+    }
+
 }
 
 @media screen and (min-width: 500px) {
