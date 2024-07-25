@@ -83,6 +83,8 @@ The RPSLS Game is a web application variant of the game "Rock, Paper, Scissors, 
 2. **Issue**: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (runGame, closeWinScrn)
     - **Solution**: This was fixed by taking the concerned functions that were referencing the outer scoped variable out of the event listener loop.
 
+![Screenshot of jshint metrics](docs/jshint-rpsls.png)
+
 ### Lighthouse scores
 
 - the accessibility score was at 88 in the beginning because I forgot to add aria-labels to the buttons without text as well as some buttons were too small for touchscreen use.
